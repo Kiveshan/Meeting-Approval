@@ -4,13 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"concurrently \"npm start --prefix server\" \"npm start --prefix client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiveshan/Meeting-Approval.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Kiveshan/Meeting-Approval/issues"
+  },
+  "homepage": "https://github.com/Kiveshan/Meeting-Approval#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "concurrently": "^9.2.1"
   }
 }
