@@ -1,25 +1,19 @@
-import logo from '../logo.svg'
-
+import styles from '../css/pagescss/HomePage.module.css'
 export default function HomePage() {
 
     return (
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                  Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                  className="App-link"
-                  href="https://reactjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn React
-                </a>
-              </header>
-            </div>
-
+      <div className={styles.main}>
+      <h1>Reporting & Meetings</h1>
+      <div className='card'>
+        <h1>Create Report</h1>
+      </div>
+      <div className='card'>
+        <h1>Review Report</h1>
+      </div>
+      <div className='card'>
+        <h1>Meetings</h1>
+      </div>
+      </div>
     )
 
 }

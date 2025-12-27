@@ -1,23 +1,37 @@
-import './App.css';
-import axios from 'axios'
+import './App.module.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
+import HomePage from './pages/HomePage';
 
 
-const apiCall = () => {
-  axios.get('http://localhost:8080').then((data) => {
-    //this console.log will be in our frontend console
-    console.log(data)
-  })
+function ContentWrapper() {
+  return(
+    <Routes>
+      <Route
+          path="/"
+          element={<HomePage />}
+        />
+        </Routes>
+  )
 }
+
+
+
 
 function App() {
   return (
+    <Router>
         <div className="App">
       <header className="App-header">
-
-        <button onClick={apiCall}>Make API Call</button>
-
+        <ContentWrapper />
       </header>
     </div>
+    </Router>
   )
 }
 
